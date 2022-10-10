@@ -1,15 +1,11 @@
 cask "lens-clean" do
     arch = Hardware::CPU.intel? ? "" : "-arm64"
   
-    version "6.0.2,20220908.1"
+    version "2022.10.70653"
   
-    if Hardware::CPU.intel?
-      sha256 "15f51ef1f9b99abec8e0ee79075edb5d49ab23602096dcbbf8699c0f22c896bb"
-    else
-      sha256 "b71e07a2f94d723bae0fc8dc9854f661db8f755838d51ca075eafb43adc2c49e"
-    end
+    sha256 "166c53d5b0b2dfe251822decf08b4e0bd5f5302f607abd845791deca351f4ff3"
   
-    url "https://api.k8slens.dev/binaries/Lens-#{version.csv.first}-latest.#{version.csv.second}#{arch}.dmg"
+    url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
     name "LensClean"
     desc "Kubernetes IDE without junk"
     homepage "https://k8slens.dev/"
