@@ -1,9 +1,9 @@
 cask "lens-clean" do
     arch = Hardware::CPU.intel? ? "" : "-arm64"
   
-    version "2022.10.111653"
+    version "2022.10.70653"
   
-    sha256 "313367bea196021faea768d69b508f0d5d50c5d592d419cd8716eb0ffbd35e42"
+    sha256 "166c53d5b0b2dfe251822decf08b4e0bd5f5302f607abd845791deca351f4ff3"
   
     url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
     name "LensClean"
@@ -17,7 +17,7 @@ cask "lens-clean" do
       end
     end
   
-    auto_updates false
+    auto_updates true
 
     app "Lens.app", target: "LensClean.app"
     
