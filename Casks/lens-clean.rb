@@ -11,7 +11,7 @@ cask "lens-clean" do
     livecheck do
       url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
       strategy :electron_builder do |data|
-        data["version"].sub("-latest.", ",")
+        data["version"].sub("-latest", "")
       end
     end
   
